@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import torch
 import transformers
-import numpy as np
 
 
 MODEL_TYPE = 'AutoModelForQuestionAnswering'
