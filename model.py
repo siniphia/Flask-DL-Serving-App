@@ -18,7 +18,11 @@ def get_tknzr(tknzr_type=TOKENIZER_TYPE, tknzr_dir=TOKENIZER_DIR):
     return getattr(transformers, tknzr_type).from_pretrained(tknzr_dir)
 
 
-def run_model_qa(model, tknzr, context, question):
+def run_model_qa(context, question):
+
+    # instantiate model and tokenizer
+    tknzr = get_tknzr()
+    model = get_model()
 
     # tokenize given strings and infer logits
     inputs = tknzr(question, context, return_tensors='pt')

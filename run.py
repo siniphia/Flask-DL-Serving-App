@@ -6,16 +6,20 @@ app = Flask(__name__)
 
 @app.route('/question', methods=['GET', 'POST'])
 def question_page():
-    return render_template('question.html')
+    if request.method in ['GET', 'POST']:
+        return render_template('question.html')
+    else:
+        print('Invalid Request')
 
 
 @app.route('/answer', methods=['POST'])
 def answer_page():
     if request.method == 'POST':
-        ans = model.run_model_qa(request.form['doc'], request.form['question'])
-        return render_template('answer.html', ans=ans)
+        answer = model.run_model_qa(request.form['context'], request.form['question'])
+        return render_template('answer.html', answer=answer)
     else:
         print('Invalid Request')
 
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=False)
