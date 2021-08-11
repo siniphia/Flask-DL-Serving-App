@@ -4,7 +4,8 @@ import model
 app = Flask(__name__)
 
 
-@app.route('/question', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
+@app.route('/question', methods=['POST'])
 def question_page():
     if request.method in ['GET', 'POST']:
         return render_template('question.html')
