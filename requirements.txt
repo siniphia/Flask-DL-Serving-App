@@ -19,7 +19,7 @@ PyYAML==5.4.1
 regex==2021.8.3
 requests==2.26.0
 sacremoses==0.0.45
-setuptools==52.0.0.post20210125
+setuptools==52.0.0
 six==1.16.0
 tokenizers==0.10.3
 http://download.pytorch.org/whl/cpu/torch-1.7.1%2Bcpu-cp38-cp38-linux_x86_64.whl
