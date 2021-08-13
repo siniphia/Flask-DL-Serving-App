@@ -33,6 +33,10 @@ def run_model_qa(context, question):
     # slice and convert original string
     answer = tknzr.convert_tokens_to_string(tknzr.convert_ids_to_tokens(input_ids[start_idx:end_idx]))
 
+    # kill tokenizer and model
+    del tknzr
+    del model
+
     return answer
 
 
