@@ -2,7 +2,6 @@
 import torch
 import transformers
 
-
 MODEL_TYPE = 'AutoModelForQuestionAnswering'
 MODEL_DIR = 'ainize/klue-bert-base-mrc'
 TOKENIZER_TYPE = 'AutoTokenizer'
@@ -18,7 +17,6 @@ def get_tknzr(tknzr_type=TOKENIZER_TYPE, tknzr_dir=TOKENIZER_DIR):
 
 
 def run_model_qa(context, question):
-
     # instantiate model and tokenizer
     tknzr = get_tknzr()
     model = get_model()
