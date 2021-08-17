@@ -3,9 +3,12 @@ import torch
 import transformers
 
 MODEL_TYPE = 'AutoModelForQuestionAnswering'
-MODEL_DIR = 'ainize/klue-bert-base-mrc'
+# MODEL_DIR = 'ainize/klue-bert-base-mrc'
+MODEL_DIR = 'monologg/koelectra-small-v3-finetuned-korquad'
+
 TOKENIZER_TYPE = 'AutoTokenizer'
-TOKENIZER_DIR = 'ainize/klue-bert-base-mrc'
+# TOKENIZER_DIR = 'ainize/klue-bert-base-mrc'
+TOKENIZER_DIR = 'monologg/koelectra-small-v3-finetuned-korquad'
 
 
 def get_model(model_type=MODEL_TYPE, model_dir=MODEL_DIR):
